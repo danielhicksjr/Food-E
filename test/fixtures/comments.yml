@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  update: MyString
+  show: MyString
+  update: MyString
+  new: MyString
+  create: MyString
+  destroy: MyString
+  index: MyString
+  edit: MyString
+  belongs_to: 
+  belongs_to: 
+
+two:
+  update: MyString
+  show: MyString
+  update: MyString
+  new: MyString
+  create: MyString
+  destroy: MyString
+  index: MyString
+  edit: MyString
+  belongs_to: 
+  belongs_to: 

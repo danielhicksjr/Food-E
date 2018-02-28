@@ -1,3 +1,6 @@
-<h1>Home Page</h1>
+<h1><%= @user.name %></h1>
 
-<p>Recent Posts</p>
+<% if @user == current_user %>
+<%= link_to "Add New Post", new_post_path %>
+<% end %>
+

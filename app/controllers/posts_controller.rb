@@ -14,16 +14,19 @@ class PostsController < ApplicationController
   end
 
   def index
+    # @post = current_user.posts.new
+    @posts = Post.all
+    
   end
 
   def new
-    @post = current_user.posts.new
-    
+   @post = Post.new
   end
 
   def show
-
+    @post = Post.find(params[:id])
     
+
   end
 
   def update
@@ -39,6 +42,6 @@ end
 
 private
     def post_params
-      return params.require(:post).permit(:title, :body)
+      return params.require(:post).permit(:image, :body, :title)
     end
-  end
+  

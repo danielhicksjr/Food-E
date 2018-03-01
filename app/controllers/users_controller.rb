@@ -6,8 +6,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
-    @posts = Post.where(user_id: @user.id)
+     @user = User.find(params[:id])
+    #  @posts = Post.all
   end
 
   def new
@@ -23,8 +23,8 @@ class UsersController < ApplicationController
   end
 
   def edit
-    
-  end
+    @user = User.find(params[:id])
+    end
 
   def update
   end

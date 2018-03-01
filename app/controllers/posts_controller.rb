@@ -8,30 +8,42 @@ class PostsController < ApplicationController
   end
 
   def destroy
+   @post = Post.find(params[user_id])
+   @user = @post.user.find(params[:id])
+   @post.destroy
+   redirect_to users_path, notice: 'Your post was deleted successfully'
+
   end
+  
 
   def edit
+    @post = Post.find params[:id]   
   end
 
   def index
-    # @post = current_user.posts.new
     @posts = Post.all
-    
   end
 
-  def new
    @post = Post.new
   end
 
   def show
-    @post = Post.find(params[:id])
-    
-
+   
   end
+def new
+
+end
 
   def update
+    @post = Post.find params[:id]
+    @post.image = params[:post][:image]
+    @post.body = params[:post][:body]
+    @post.title = params[:post][:title]
+    if @post.save
+      redirect_to root_path
+    end
   end
-end
+
 
   def authorize_post_view 
   @post = Post.find params[:id]
@@ -44,4 +56,4 @@ private
     def post_params
       return params.require(:post).permit(:image, :body, :title)
     end
-  
+  end

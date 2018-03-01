@@ -1,2 +1,8 @@
-<h1>Posts#destroy</h1>
-<p>Find me in app/views/posts/destroy.html.erb</p>
+<%= @post.image %>
+<%= @post.title %>
+<%= @post.body %>
+
+
+<% if @post.user == current_user %>
+    <%= link_to “Delete Post”, post_path(@.id), {method: ‘delete’, data: {confirm: “Are you sure?“}} %>  
+<% end %>

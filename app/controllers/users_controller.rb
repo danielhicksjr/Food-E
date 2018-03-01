@@ -21,6 +21,7 @@ class UsersController < ApplicationController
     else
       redirect_to new_user_path
   end
+end
 
   def edit
     @user = User.find(params[:id])
@@ -33,7 +34,7 @@ class UsersController < ApplicationController
   end
   
   
-end
+
 
 
 private

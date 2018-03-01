@@ -8,31 +8,27 @@ class PostsController < ApplicationController
   end
 
   def destroy
-   @post = Post.find(params[user_id])
-   @user = @post.user.find(params[:id])
-   @post.destroy
-   redirect_to users_path, notice: 'Your post was deleted successfully'
-
+    @post = Post.find(params[:id])
+    @post.destroy 
+    redirect_to users_path
   end
   
 
   def edit
-    @post = Post.find params[:id]   
+    @post = Post.find params[:id] 
+    
   end
 
   def index
     @posts = Post.all
   end
-
+  
+  def new
    @post = Post.new
   end
 
   def show
-   
-  end
-def new
-
-end
+   end
 
   def update
     @post = Post.find params[:id]

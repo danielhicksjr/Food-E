@@ -1,9 +1,12 @@
 @import "bootstrap";
 
-h1 {
-    color: darkblue;
-}
 
 body {
-    background-image: url("https://t3.ftcdn.net/jpg/00/89/60/50/240_F_89605000_ZkMdykZjIYKqMCVYPdb7ehtwrGXy5nTU.jpg");
+    background-image: url("https://image.freepik.com/free-photo/smooth-stucco-wall_1194-7087.jpg");
+    
+}
+
+.collapse navbar-collapse {
+
+    float: right;
 }

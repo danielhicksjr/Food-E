@@ -17,8 +17,10 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      flash[:success] = "You have successfully created an account."
       redirect_to new_session_path 
     else
+      flash[:danger] = "Please check all fields are correct."
       redirect_to new_user_path
   end
 end

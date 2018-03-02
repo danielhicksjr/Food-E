@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :authorize_post_view, only: :show 
+  before_action :authorize_post_view, only: [:edit, :update, :destroy]
   
   def create
       @post = current_user.posts.new post_params
@@ -10,6 +10,7 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @post.destroy 
+    flash[:success] = "Signed out successfully."
     redirect_to posts_path
   end
   
@@ -27,6 +28,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    @post = Post.find(params[:id])
    end
 
   def update
@@ -41,14 +43,15 @@ class PostsController < ApplicationController
 
 
   def authorize_post_view 
-  @post = Post.find params[:id]
-  if  @post.user_id != current_user.id
-  redirect_to root_path
+    @post = Post.find params[:id]
+    if  @post.user_id != current_user.id
+    redirect_to post_path
+    end
   end
-end
 
 private
     def post_params
       return params.require(:post).permit(:image, :body, :title)
     end
   end
+  

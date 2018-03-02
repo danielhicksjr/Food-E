@@ -1,12 +1,11 @@
-<h1>Home Page</h1>
-<p>Recent Posts</p>
+
 
 <% @posts.each_slice(4) do |row| %>
     <div class="row">
         <% row.each do |post| %>
             <div class="col-md-3">
                 <div class="card">
-                    <%= link_to(post_path(post.id)) do %>
+                    <%= link_to(post_path(post.id), {class: "grid-image-link"}) do %>
                         <%= image_tag(post.image, { class: "card-img-top" }) %>
                     <% end %>
                 </div> 

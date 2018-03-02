@@ -4,7 +4,7 @@ This app is a centralized place for food lovers of all kinds to post their food 
 
 # Technologies Used
 
-1. Ruby on Rails, HTML, JavaScript, CSS, Bootstrap
+1. Ruby on Rails, HTML, CSS, Bootstrap
 
 # User Stories
 

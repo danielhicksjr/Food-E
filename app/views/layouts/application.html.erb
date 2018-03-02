@@ -9,13 +9,14 @@
 
   <body>
 
-  
+   
 
     <% link_to "Home Page", root_path %>
 
   <% if logged_in? %>
        <% link_to "Sign Out", logout_path, {method: "delete"} %>
-        <% link_to current_user.name, user_path(current_user.id) %>
+       <% link_to current_user.name, user_path(current_user.id) %>
+       
       
     <% else %>
       <% link_to "Sign In", new_session_path %>

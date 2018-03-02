@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
   before_action :authorize, only: [:show]
+  
+  
 
   def index
     @users = User.all
@@ -7,6 +9,7 @@ class UsersController < ApplicationController
 
   def show
      @user = User.find(params[:id])
+     
     #  @posts = Post.all
   end
 
@@ -20,7 +23,7 @@ class UsersController < ApplicationController
       flash[:success] = "You have successfully created an account."
       redirect_to new_session_path 
     else
-      flash[:danger] = "Please check all fields are correct."
+      flash[:danger] = "Please check to ensure all fields are correct."
       redirect_to new_user_path
   end
 end

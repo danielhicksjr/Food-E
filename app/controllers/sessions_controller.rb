@@ -10,6 +10,7 @@ class SessionsController < ApplicationController
     flash[:success] = "Welcome, #{@user.name}."
     redirect_to posts_path
    else 
+    flash[:danger] = "The information provided is incorrect. Please try again."
     redirect_to new_session_path
    end
 

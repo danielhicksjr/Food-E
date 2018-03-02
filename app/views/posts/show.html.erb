@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card3">
   <%= image_tag(@post.image, { class: "card-img-top" }) %>
   <div class="card-body">
     <h5 class="card-title"><%= @post.title %></h5>
@@ -9,5 +9,5 @@
 
 <% if @post.user == current_user %>
   <%= link_to "Edit", edit_post_path %>
-  <%= link_to "Delete", @post, method: :delete, data: { confirm: 'Are you sure?' } %> 
+  <%= link_to "Delete", @post, method: :delete, data: {confirm: 'Are you sure?'} %> 
 <% end %>

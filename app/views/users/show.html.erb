@@ -1,15 +1,19 @@
+<h1><%= @user.name %></h1>
 
 <% if @user == current_user %>
-<%= link_to "Add New Post", new_post_path %>
+<%= link_to "Create New Post", new_post_path %>
+
+
 <% end %>
 
 
 <% @user.posts.each do |post| %>
     <div class="col-md-3">
-        <div class="card">
+        <div class="card2">
             <%= link_to(post_path(post.id)) do %>
                 <%= image_tag(post.image, { class: "card-img-top" }) %>
-                <%= post.title %>
+                <%= post.title %></br>
+                                 </br>
                 <%= post.body %>
             <% end %>
         </div> 

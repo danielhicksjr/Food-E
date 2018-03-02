@@ -1,5 +1,7 @@
 # Food-E 
 
+This app is a centralized place for food lovers of all kinds to post their food pictures and let others know how their experience was and what they thought of their food.     
+
 # Technologies Used
 
 1. Ruby on Rails, HTML, JavaScript, CSS, Bootstrap

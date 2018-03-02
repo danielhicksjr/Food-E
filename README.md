@@ -27,7 +27,7 @@
 4. a map/location option when creating a post to pinpoint where your location was.
 5. option to upload images for posts and profile page.
 
-#Links
+# Links
 
 <https://trello.com/b/OGY0Fe1R>
 

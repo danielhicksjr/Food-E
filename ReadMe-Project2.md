@@ -1,8 +1,9 @@
+
 #Food-E 
 
 # Technologies Used
 
-1. Ruby on Rails, HTML, JavaScript, CSS, Bootstrap
+1. Ruby on Rails, HTML, CSS, Bootstrap
 
 # User Stories
 
@@ -32,6 +33,4 @@
 <https://trello.com/b/OGY0Fe1R>
 
 <https://github.com/danielhicksjr/Food-E.git>
-
-
 

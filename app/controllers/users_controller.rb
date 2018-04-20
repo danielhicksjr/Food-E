@@ -9,28 +9,29 @@ class UsersController < ApplicationController
 
   def show
      @user = User.find(params[:id])
-     
-    #  @posts = Post.all
+   
   end
 
+  
   def new
     @user = User.new 
   end
 
+  
   def create
-    @user = User.new(user_params)
+        @user = User.new(user_params)
     if @user.save
-      flash[:success] = "You have successfully created an account."
-      redirect_to new_session_path 
+        flash[:success] = "You have successfully created an account."
+        redirect_to new_session_path 
     else
-      flash[:danger] = "Please check to ensure all fields are correct."
-      redirect_to new_user_path
+        flash[:danger] = "Please check to ensure all fields are correct."
+        redirect_to new_user_path
   end
 end
 
   def edit
     @user = User.find(params[:id])
-    end
+  end
 
   def update
   end

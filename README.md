@@ -31,9 +31,11 @@ This app is a centralized place for food lovers of all kinds to post their food 
 
 # Links
 
+<https://quiet-beach-31061.herokuapp.com/>
+
 <https://trello.com/b/OGY0Fe1R>
 
-<https://github.com/danielhicksjr/Food-E.git>
+
 
 
 

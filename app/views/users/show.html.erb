@@ -1,7 +1,10 @@
+<div class="username">
 <h1><%= @user.name %></h1>
+</div>
+
 
 <% if @user == current_user %>
-<%= link_to "Create New Post", new_post_path %>
+<div class="newpost"><%= link_to "Create New Post", new_post_path %></div>
 
 
 <% end %>

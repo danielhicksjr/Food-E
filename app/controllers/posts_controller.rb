@@ -10,7 +10,7 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @post.destroy 
-    flash[:success] = "Signed out successfully."
+    flash[:success] = "Post deleted successfully."
     redirect_to posts_path
   end
   
